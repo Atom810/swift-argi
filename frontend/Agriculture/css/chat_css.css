@@ -1,0 +1,148 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Manrope', sans-serif;
+    background-color: #F0F4F8; /* 更柔和的浅灰色背景 */
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.sidebar {
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #3A506B; /* 深蓝色 */
+    font-weight: 600;
+}
+
+.sidebar .form-label {
+    font-weight: 500;
+    color: #2B2D42; /* 深灰色文本 */
+}
+
+.btn-primary {
+    background-color: #5BC0BE; /* 天蓝色按钮 */
+    border: none;
+    box-shadow: 0 4px 10px rgba(91, 192, 190, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #3A506B; /* 深蓝色悬停效果 */
+    box-shadow: 0 6px 15px rgba(58, 80, 107, 0.3);
+}
+
+.content-container {
+    background-color: #F0F4F8; /* 浅灰色背景 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 0; /* 防止它扩展 */
+    width: 100%; /* 根据需要设置宽度 */
+    height: calc(100vh - 60px); /* 固定高度，减去输入框的高度 */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow-y: auto; /* 启用垂直滚动 */
+    margin-bottom: 20px;
+}
+
+
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.input-box input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.input-box button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #5BC0BE;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-box button:hover {
+    background-color: #3A506B;
+}
+
+.message {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 15px; /* 圆角 */
+    display: block; /* 每条对话占据一行 */
+    width: fit-content; /* 宽度根据内容自动调整 */
+    max-width: 70%; /* 可选：设定最大宽度，防止过宽 */
+    word-wrap: break-word; /* 长文本换行 */
+    clear: both; /* 确保新对话在新行显示 */
+}
+
+.user-message {
+    background-color: #e1f0ff;
+    margin-left: auto;
+    text-align: right;
+    border: 1px solid #b6d7ff;
+    float: right; /* 用户消息浮动在右侧 */
+}
+
+.response-message {
+    background-color: #e8f6ea;
+    text-align: left;
+    border: 1px solid #c6e3c9;
+    float: left; /* 响应消息浮动在左侧 */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    
+}
+#send-button:disabled {
+background-color: #c0c0c0; /* 灰色背景 */
+border: none; /* 移除边框 */
+cursor: not-allowed; /* 显示禁用状态的鼠标样式 */
+color: #ffffff; /* 字体颜色，确保在灰色背景上可见 */
+box-shadow: none; /* 移除按钮的阴影效果 */
+}
